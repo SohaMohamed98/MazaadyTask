@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormVC" customModule="MazaadyTask" customModuleProvider="target">
+            <connections>
+                <outlet property="uiCategoryView" destination="LMH-Vf-U82" id="Nrx-pr-9gt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OdX-24-B1M">
+                    <rect key="frame" x="8" y="58" width="359" height="640"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMH-Vf-U82" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Tu7-z2-ZqY"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Category"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="select category"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24x-j7-aJf" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="80" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Subcategory"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="select Subcategory"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qar-GG-u1h" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="160" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Process Type"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="select  Process Type"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzJ-Sh-pwm" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="240" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YM9-62-exD" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="320" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Brand"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="select Brand"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-Q9-wl3" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="400" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Model"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="select Model"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hm-5M-mpD" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="480" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Type"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="select Type"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKl-pG-Pat" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="560" width="359" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Transmission type"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="select Transmission type"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OdX-24-B1M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Cg6-vy-mHe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OdX-24-B1M" secondAttribute="trailing" constant="8" id="Cuh-NH-iIQ"/>
+                <constraint firstItem="OdX-24-B1M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="OtL-4n-TFn"/>
+            </constraints>
+            <point key="canvasLocation" x="120.8" y="19.95073891625616"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
