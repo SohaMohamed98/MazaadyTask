@@ -6,9 +6,14 @@ target 'MazaadyTask' do
   use_frameworks!
 
   # Pods for MazaadyTask
+
+   # Reactive
    pod 'RxSwift'
    pod 'RxCocoa'
    pod 'RxGesture'
+
+  # Network
+   pod 'Alamofire'
 
   target 'MazaadyTaskTests' do
     inherit! :search_paths

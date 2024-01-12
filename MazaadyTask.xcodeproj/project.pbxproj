@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040293272B51CAA800722B54 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040293262B51CAA800722B54 /* APIRouter.swift */; };
+		040293292B51CCFB00722B54 /* NetworkConstatnts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040293282B51CCFB00722B54 /* NetworkConstatnts.swift */; };
+		0402932D2B51CDB700722B54 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402932C2B51CDB700722B54 /* ResponseObject.swift */; };
+		0402932F2B51CDC600722B54 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402932E2B51CDC600722B54 /* ServiceError.swift */; };
+		040293322B51CE7000722B54 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040293312B51CE7000722B54 /* BaseRepository.swift */; };
+		040293342B51CE9600722B54 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040293332B51CE9600722B54 /* NetworkClient.swift */; };
+		040293362B51CF7500722B54 /* FailureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040293352B51CF7500722B54 /* FailureResponse.swift */; };
+		0402933A2B51D03700722B54 /* FormRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040293392B51D03700722B54 /* FormRouter.swift */; };
+		0402933C2B51D14D00722B54 /* FormRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402933B2B51D14D00722B54 /* FormRepo.swift */; };
+		0402933E2B51D22F00722B54 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402933D2B51D22F00722B54 /* FormModel.swift */; };
+		040293402B51DB4A00722B54 /* FormVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402933F2B51DB4A00722B54 /* FormVM.swift */; };
 		04817AF52B5180ED006F15EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817AF42B5180ED006F15EB /* AppDelegate.swift */; };
 		04817AF72B5180ED006F15EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817AF62B5180ED006F15EB /* SceneDelegate.swift */; };
 		04817AFF2B5180ED006F15EB /* MazaadyTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04817AFD2B5180ED006F15EB /* MazaadyTask.xcdatamodeld */; };
@@ -44,6 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040293262B51CAA800722B54 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		040293282B51CCFB00722B54 /* NetworkConstatnts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstatnts.swift; sourceTree = "<group>"; };
+		0402932C2B51CDB700722B54 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
+		0402932E2B51CDC600722B54 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		040293312B51CE7000722B54 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		040293332B51CE9600722B54 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		040293352B51CF7500722B54 /* FailureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureResponse.swift; sourceTree = "<group>"; };
+		040293392B51D03700722B54 /* FormRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRouter.swift; sourceTree = "<group>"; };
+		0402933B2B51D14D00722B54 /* FormRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRepo.swift; sourceTree = "<group>"; };
+		0402933D2B51D22F00722B54 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		0402933F2B51DB4A00722B54 /* FormVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormVM.swift; sourceTree = "<group>"; };
 		04817AF12B5180ED006F15EB /* MazaadyTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazaadyTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04817AF42B5180ED006F15EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04817AF62B5180ED006F15EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +123,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040293252B51CA8200722B54 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				040293262B51CAA800722B54 /* APIRouter.swift */,
+				040293282B51CCFB00722B54 /* NetworkConstatnts.swift */,
+				0402932C2B51CDB700722B54 /* ResponseObject.swift */,
+				0402932E2B51CDC600722B54 /* ServiceError.swift */,
+				040293332B51CE9600722B54 /* NetworkClient.swift */,
+				040293352B51CF7500722B54 /* FailureResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		040293302B51CE6000722B54 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				040293312B51CE7000722B54 /* BaseRepository.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		040293372B51D02200722B54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				040293392B51D03700722B54 /* FormRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		040293382B51D02900722B54 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				0402933B2B51D14D00722B54 /* FormRepo.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
 		04817AE82B5180ED006F15EB = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +185,8 @@
 		04817AF32B5180ED006F15EB /* MazaadyTask */ = {
 			isa = PBXGroup;
 			children = (
+				040293302B51CE6000722B54 /* Core */,
+				040293252B51CA8200722B54 /* Network */,
 				04817B312B518504006F15EB /* Utilities */,
 				04817B272B518453006F15EB /* Modules */,
 				04817AF42B5180ED006F15EB /* AppDelegate.swift */,
@@ -158,6 +219,8 @@
 		04817B272B518453006F15EB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				040293382B51D02900722B54 /* Repo */,
+				040293372B51D02200722B54 /* Router */,
 				04817B302B5184FA006F15EB /* Model */,
 				04817B2F2B5184F1006F15EB /* ViewModel */,
 				04817B282B51846C006F15EB /* View */,
@@ -177,6 +240,7 @@
 		04817B2F2B5184F1006F15EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0402933F2B51DB4A00722B54 /* FormVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -184,6 +248,7 @@
 		04817B302B5184FA006F15EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0402933D2B51D22F00722B54 /* FormModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,12 +543,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0402932F2B51CDC600722B54 /* ServiceError.swift in Sources */,
 				04817B3B2B518B47006F15EB /* DesignableUIView.swift in Sources */,
+				0402932D2B51CDB700722B54 /* ResponseObject.swift in Sources */,
+				0402933C2B51D14D00722B54 /* FormRepo.swift in Sources */,
 				04817B2D2B5184A1006F15EB /* FormVC.swift in Sources */,
 				04817B372B518560006F15EB /* FieldView.swift in Sources */,
+				040293292B51CCFB00722B54 /* NetworkConstatnts.swift in Sources */,
 				04817B392B5187E6006F15EB /* NibLoadingView.swift in Sources */,
+				040293402B51DB4A00722B54 /* FormVM.swift in Sources */,
 				04817AF52B5180ED006F15EB /* AppDelegate.swift in Sources */,
+				040293272B51CAA800722B54 /* APIRouter.swift in Sources */,
 				04817AFF2B5180ED006F15EB /* MazaadyTask.xcdatamodeld in Sources */,
+				040293362B51CF7500722B54 /* FailureResponse.swift in Sources */,
+				0402933E2B51D22F00722B54 /* FormModel.swift in Sources */,
+				0402933A2B51D03700722B54 /* FormRouter.swift in Sources */,
+				040293342B51CE9600722B54 /* NetworkClient.swift in Sources */,
+				040293322B51CE7000722B54 /* BaseRepository.swift in Sources */,
 				04817AF72B5180ED006F15EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
