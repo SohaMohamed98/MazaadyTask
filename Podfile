@@ -14,6 +14,8 @@ target 'MazaadyTask' do
 
   # Network
    pod 'Alamofire'
+  # DropDown
+   pod 'iOSDropDown'
 
   target 'MazaadyTaskTests' do
     inherit! :search_paths

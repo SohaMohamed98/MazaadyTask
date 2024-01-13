@@ -29,8 +29,15 @@ extension APIRouter {
             throw ApiError.URLNotValid
         }
         url.appendPathComponent(path)
-        var request = try URLRequest(url: url, method: method, headers: headers)
+        var request = try URLRequest(url: url, method: method, headers: nil)
+        if let headers = headers {
+            headers.forEach{
+                request.setValue($0.value, forHTTPHeaderField: $0.name)
+                request.setValue("en", forHTTPHeaderField: "Accept-Language")
+            }
+        }
         return try encoding.encode(request, with: parameters)
+        
     }
    
    

@@ -10,7 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormVC" customModule="MazaadyTask" customModuleProvider="target">
             <connections>
+                <outlet property="specifyTF" destination="MTW-tu-E94" id="uqM-lY-Le5"/>
+                <outlet property="uiBrandView" destination="YM9-62-exD" id="Vya-MT-ZtR"/>
                 <outlet property="uiCategoryView" destination="LMH-Vf-U82" id="Nrx-pr-9gt"/>
+                <outlet property="uiHomeBtn" destination="12E-kg-HoN" id="v2c-CH-QXu"/>
+                <outlet property="uiModelView" destination="mYq-Q9-wl3" id="hfb-Dn-Gt7"/>
+                <outlet property="uiProcessView" destination="qar-GG-u1h" id="g2N-jV-oSh"/>
+                <outlet property="uiSpecifyHereTitle" destination="kwi-8E-fqb" id="vZ5-w5-u8Y"/>
+                <outlet property="uiSpecifyHereView" destination="T9T-Xv-xfS" id="R4q-JG-qkE"/>
+                <outlet property="uiSubCategoryView" destination="24x-j7-aJf" id="Ad3-z1-1vD"/>
+                <outlet property="uiTypeView" destination="9hm-5M-mpD" id="pOU-7L-2SY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OdX-24-B1M">
-                    <rect key="frame" x="8" y="58" width="359" height="640"/>
+                    <rect key="frame" x="8" y="58" width="359" height="320"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMH-Vf-U82" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="359" height="80"/>
@@ -31,6 +40,7 @@
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Category"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="select category"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="showTitle" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24x-j7-aJf" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
@@ -49,28 +59,73 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="select  Process Type"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzJ-Sh-pwm" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="240" width="359" height="80"/>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9T-Xv-xfS" customClass="DesignableUIView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="240" width="359" height="0.0"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiX-HG-UUW" customClass="DesignableUIView" customModule="MazaadyTask" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="-55" width="343" height="50"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Specify here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTW-tu-E94">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="MTW-tu-E94" firstAttribute="leading" secondItem="YiX-HG-UUW" secondAttribute="leading" id="TDa-9d-QSq"/>
+                                        <constraint firstAttribute="bottom" secondItem="MTW-tu-E94" secondAttribute="bottom" id="mTT-oH-66x"/>
+                                        <constraint firstItem="MTW-tu-E94" firstAttribute="top" secondItem="YiX-HG-UUW" secondAttribute="top" id="nVO-Q4-WZ6"/>
+                                        <constraint firstAttribute="height" constant="50" id="nwW-vv-xb1"/>
+                                        <constraint firstAttribute="trailing" secondItem="MTW-tu-E94" secondAttribute="trailing" id="wuN-wl-FWG"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" systemColor="systemGray2Color"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Specify here  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwi-8E-fqb">
+                                    <rect key="frame" x="24.000000000000007" y="-67" width="112.66666666666669" height="20.333333333333329"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="kwi-8E-fqb" firstAttribute="top" secondItem="YiX-HG-UUW" secondAttribute="top" constant="-12" id="08G-vZ-4ev"/>
+                                <constraint firstAttribute="bottom" secondItem="YiX-HG-UUW" secondAttribute="bottom" constant="5" id="FVq-LU-vkf"/>
+                                <constraint firstItem="kwi-8E-fqb" firstAttribute="leading" secondItem="YiX-HG-UUW" secondAttribute="leading" constant="16" id="Kuv-CH-ydq"/>
+                                <constraint firstAttribute="trailing" secondItem="YiX-HG-UUW" secondAttribute="trailing" constant="8" id="QLq-e2-xxQ"/>
+                                <constraint firstItem="YiX-HG-UUW" firstAttribute="leading" secondItem="T9T-Xv-xfS" secondAttribute="leading" constant="8" id="vz8-t8-ewW"/>
+                            </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YM9-62-exD" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="320" width="359" height="80"/>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YM9-62-exD" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="240" width="359" height="0.0"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Brand"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="select Brand"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-Q9-wl3" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="400" width="359" height="80"/>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-Q9-wl3" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="240" width="359" height="0.0"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Model"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="select Model"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hm-5M-mpD" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="480" width="359" height="80"/>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hm-5M-mpD" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="240" width="359" height="0.0"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Type"/>
@@ -78,7 +133,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKl-pG-Pat" customClass="FieldView" customModule="MazaadyTask" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="560" width="359" height="80"/>
+                            <rect key="frame" x="0.0" y="240" width="359" height="80"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Transmission type"/>
@@ -87,6 +142,11 @@
                         </view>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12E-kg-HoN">
+                    <rect key="frame" x="152.66666666666666" y="759.66666666666663" width="69.666666666666657" height="34.333333333333371"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Home"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,6 +154,8 @@
                 <constraint firstItem="OdX-24-B1M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Cg6-vy-mHe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OdX-24-B1M" secondAttribute="trailing" constant="8" id="Cuh-NH-iIQ"/>
                 <constraint firstItem="OdX-24-B1M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="OtL-4n-TFn"/>
+                <constraint firstItem="12E-kg-HoN" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="16" id="nHz-kX-3wF"/>
+                <constraint firstItem="12E-kg-HoN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xbA-JH-3iV"/>
             </constraints>
             <point key="canvasLocation" x="120.8" y="19.95073891625616"/>
         </view>
@@ -101,6 +163,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

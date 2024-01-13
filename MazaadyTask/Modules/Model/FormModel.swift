@@ -40,17 +40,11 @@ struct AdsBanner: Codable {
 struct Category: Codable {
     let id: Int?
     let name: String?
-    let description: String?
-    let image: String?
-    let slug: String?
     let children: [Category]?
-    let circleIcon: String?
-    let disableShipping: Int?
+    let options: [Category]?
 
     enum CodingKeys: String, CodingKey {
-        case id, name, description, image, slug, children
-        case circleIcon = "circle_icon"
-        case disableShipping = "disable_shipping"
+        case id, name, children, options
     }
 }
 

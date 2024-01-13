@@ -30,6 +30,12 @@ class FieldView: NibLoadingView {
             uiNameLabel.text = name
         }
     }
+    @IBInspectable
+    var showTitle:Bool = false {
+        didSet{
+            uiTitleLabel.isHidden = !showTitle
+        }
+    }
     
     func actionTapped(){
         self.uiContainerView.rx.tapGesture()
