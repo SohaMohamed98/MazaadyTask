@@ -190,11 +190,7 @@ extension FormVC {
     
     private func presentDropDown(list: [Category],  selectedType: BehaviorRelay<Category?>){
         DispatchQueue.main.async {
-            let vc = DropDownController(viewModel:
-                    .init(list: list,
-                          selectedCategory: selectedType))
-            vc.modalPresentationStyle = .overFullScreen
-            self.present(vc, animated: true)
+            self.coordinator.Main.navigate(to: .DropDown(list: list, selectedType: selectedType), navigatorType: .present)
         }
     }
     
@@ -202,6 +198,7 @@ extension FormVC {
         self.uiHomeBtn.rx.tap.subscribe(onNext:{[weak self] _ in
             guard let self = self else{return}
             //TODO: - Navigate To Tabbar
+            self.coordinator.Main.navigate(to: .tabBar, navigatorType: .root)
         }).disposed(by: self.disposeBag)
     }
     

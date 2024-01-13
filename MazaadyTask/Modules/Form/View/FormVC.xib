@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -142,10 +143,17 @@
                         </view>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12E-kg-HoN">
-                    <rect key="frame" x="152.66666666666666" y="759.66666666666663" width="69.666666666666657" height="34.333333333333371"/>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12E-kg-HoN">
+                    <rect key="frame" x="93.666666666666671" y="759.66666666666663" width="187.66666666666663" height="34.333333333333371"/>
+                    <color key="backgroundColor" name="PrimaryRed"/>
+                    <color key="tintColor" name="NeutralWhite"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Home"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -154,6 +162,7 @@
                 <constraint firstItem="OdX-24-B1M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Cg6-vy-mHe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OdX-24-B1M" secondAttribute="trailing" constant="8" id="Cuh-NH-iIQ"/>
                 <constraint firstItem="OdX-24-B1M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="OtL-4n-TFn"/>
+                <constraint firstItem="12E-kg-HoN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="UGj-YO-vaF"/>
                 <constraint firstItem="12E-kg-HoN" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="16" id="nHz-kX-3wF"/>
                 <constraint firstItem="12E-kg-HoN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xbA-JH-3iV"/>
             </constraints>
@@ -161,6 +170,12 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="NeutralWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryRed">
+            <color red="0.92549019607843142" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

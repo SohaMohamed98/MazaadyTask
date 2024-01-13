@@ -12,6 +12,7 @@ import RxCocoa
 
 class BaseWireFrame<T: BaseViewModel>: UIViewController , UIGestureRecognizerDelegate{
     var viewModel: T!
+    var coordinator : Coordinator!
     lazy var disposeBag: DisposeBag = {
         return DisposeBag()
     }()
@@ -22,8 +23,9 @@ class BaseWireFrame<T: BaseViewModel>: UIViewController , UIGestureRecognizerDel
     }()
     
     private lazy var bgColorView = UIView()
-    init(viewModel: T) {
+    init(viewModel: T, coordinator: Coordinator) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     

@@ -111,7 +111,7 @@ class HomeVC: BaseWireFrame<HomeVM> {
     // MARK: - Configure Item Collection -
     func designItem(){
         let itemlayout = uiItemCollection.collectionViewLayout as! UICollectionViewFlowLayout
-        itemlayout.itemSize = .init(width: uiItemCollection.frame.width-30, height: uiItemCollection.frame.width+10)
+        itemlayout.itemSize = .init(width: uiItemCollection.frame.width-30, height: uiItemCollection.frame.width-10)
     }
     func bindItems(){
         viewModel.itemsSubject.bind(to: self.uiItemCollection.rx

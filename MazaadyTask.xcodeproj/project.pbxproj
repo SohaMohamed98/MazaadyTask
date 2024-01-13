@@ -48,6 +48,11 @@
 		04817B372B518560006F15EB /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817B362B518560006F15EB /* FieldView.swift */; };
 		04817B392B5187E6006F15EB /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817B382B5187E6006F15EB /* NibLoadingView.swift */; };
 		04817B3B2B518B47006F15EB /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817B3A2B518B47006F15EB /* DesignableUIView.swift */; };
+		04A703802B52DE940010B328 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7037F2B52DE940010B328 /* CustomTabBar.swift */; };
+		04A703832B52DF270010B328 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A703812B52DF270010B328 /* CustomTabBarController.swift */; };
+		04A703872B52E1F70010B328 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A703862B52E1F70010B328 /* AppCoordinator.swift */; };
+		04A7038A2B52E21C0010B328 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A703892B52E21C0010B328 /* Navigator.swift */; };
+		04A7038C2B52E2850010B328 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7038B2B52E2850010B328 /* MainNavigator.swift */; };
 		04AABDF42B52B04100E09B27 /* HomeTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AABDF22B52B04100E09B27 /* HomeTypeCell.swift */; };
 		04AABDF52B52B04100E09B27 /* HomeTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AABDF32B52B04100E09B27 /* HomeTypeCell.xib */; };
 		04BA89892B52B889002DCB5A /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA89872B52B889002DCB5A /* HomeItemCell.swift */; };
@@ -123,6 +128,11 @@
 		04817B362B518560006F15EB /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 		04817B382B5187E6006F15EB /* NibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
 		04817B3A2B518B47006F15EB /* DesignableUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIView.swift; sourceTree = "<group>"; };
+		04A7037F2B52DE940010B328 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		04A703812B52DF270010B328 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		04A703862B52E1F70010B328 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		04A703892B52E21C0010B328 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		04A7038B2B52E2850010B328 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		04AABDF22B52B04100E09B27 /* HomeTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTypeCell.swift; sourceTree = "<group>"; };
 		04AABDF32B52B04100E09B27 /* HomeTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTypeCell.xib; sourceTree = "<group>"; };
 		04BA89872B52B889002DCB5A /* HomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
@@ -424,6 +434,8 @@
 		04817B312B518504006F15EB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				04A703852B52E1E10010B328 /* Coordinator */,
+				04A7037E2B52DE710010B328 /* CustomTabBar */,
 				043CA82D2B52992400C71387 /* DesignSystem */,
 				044306D12B51E7AF00A2F2B9 /* DropDownView */,
 				04817B322B51850F006F15EB /* CustomViews */,
@@ -448,6 +460,33 @@
 				04817B362B518560006F15EB /* FieldView.swift */,
 			);
 			path = FieldView;
+			sourceTree = "<group>";
+		};
+		04A7037E2B52DE710010B328 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				04A7037F2B52DE940010B328 /* CustomTabBar.swift */,
+				04A703812B52DF270010B328 /* CustomTabBarController.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		04A703852B52E1E10010B328 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				04A703882B52E2070010B328 /* Navigators */,
+				04A703862B52E1F70010B328 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		04A703882B52E2070010B328 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				04A703892B52E21C0010B328 /* Navigator.swift */,
+				04A7038B2B52E2850010B328 /* MainNavigator.swift */,
+			);
+			path = Navigators;
 			sourceTree = "<group>";
 		};
 		04AABDF12B52B02800E09B27 /* HomeTypeCell */ = {
@@ -748,6 +787,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0402932F2B51CDC600722B54 /* ServiceError.swift in Sources */,
+				04A703872B52E1F70010B328 /* AppCoordinator.swift in Sources */,
 				043CA8322B52995F00C71387 /* ColorSystem.swift in Sources */,
 				04817B3B2B518B47006F15EB /* DesignableUIView.swift in Sources */,
 				0402932D2B51CDB700722B54 /* ResponseObject.swift in Sources */,
@@ -763,15 +803,18 @@
 				04817B372B518560006F15EB /* FieldView.swift in Sources */,
 				04AABDF42B52B04100E09B27 /* HomeTypeCell.swift in Sources */,
 				040293292B51CCFB00722B54 /* NetworkConstatnts.swift in Sources */,
+				04A703802B52DE940010B328 /* CustomTabBar.swift in Sources */,
 				04817B392B5187E6006F15EB /* NibLoadingView.swift in Sources */,
 				040293402B51DB4A00722B54 /* FormVM.swift in Sources */,
 				04817AF52B5180ED006F15EB /* AppDelegate.swift in Sources */,
+				04A7038A2B52E21C0010B328 /* Navigator.swift in Sources */,
 				040293272B51CAA800722B54 /* APIRouter.swift in Sources */,
 				04817AFF2B5180ED006F15EB /* MazaadyTask.xcdatamodeld in Sources */,
 				044306D52B51E7FE00A2F2B9 /* DropDownController.swift in Sources */,
 				040293362B51CF7500722B54 /* FailureResponse.swift in Sources */,
 				0402933E2B51D22F00722B54 /* FormModel.swift in Sources */,
 				044306DC2B51EBCF00A2F2B9 /* DropDownCell.swift in Sources */,
+				04A703832B52DF270010B328 /* CustomTabBarController.swift in Sources */,
 				040293422B51DBAA00722B54 /* BaseViewModel.swift in Sources */,
 				0402933A2B51D03700722B54 /* FormRouter.swift in Sources */,
 				040293342B51CE9600722B54 /* NetworkClient.swift in Sources */,
@@ -780,6 +823,7 @@
 				04817AF72B5180ED006F15EB /* SceneDelegate.swift in Sources */,
 				043CA82B2B52964200C71387 /* HomeHeaderCell.swift in Sources */,
 				044306D92B51E8D300A2F2B9 /* DropDownVM.swift in Sources */,
+				04A7038C2B52E2850010B328 /* MainNavigator.swift in Sources */,
 				04D8CDFF2B52D5E300B23733 /* UICollectionViewCell+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="50" width="375" height="60"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6D3-sJ-KHz">
-                            <rect key="frame" x="8" y="0.0" width="359" height="60"/>
+                            <rect key="frame" x="16" y="0.0" width="343" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6t-SP-xBm">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
@@ -47,24 +47,35 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p0a-46-R11">
-                                    <rect key="frame" x="58" y="0.0" width="269" height="60"/>
+                                    <rect key="frame" x="58" y="0.0" width="253" height="60"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hallo, Samuel!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqW-9t-HWP">
-                                            <rect key="frame" x="0.0" y="0.0" width="269" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="253" height="30"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" name="NeutralGray1"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1600 Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55D-aL-LD1">
-                                            <rect key="frame" x="0.0" y="30" width="269" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" name="SecondaryYellowEgg"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pa4-yZ-gt0">
+                                            <rect key="frame" x="0.0" y="30" width="253" height="30"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="points_icon" translatesAutoresizingMaskIntoConstraints="NO" id="e3P-rW-lFx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="18" id="nZ9-sG-n94"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1600 Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55D-aL-LD1">
+                                                    <rect key="frame" x="22" y="0.0" width="231" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="SecondaryYellowEgg"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmh-Ca-3gs">
-                                    <rect key="frame" x="335" y="0.0" width="24" height="60"/>
+                                    <rect key="frame" x="319" y="0.0" width="24" height="60"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification_icon" translatesAutoresizingMaskIntoConstraints="NO" id="JKf-e9-rWM">
                                             <rect key="frame" x="0.0" y="18" width="24" height="24"/>
@@ -87,10 +98,10 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="6D3-sJ-KHz" secondAttribute="bottom" id="KHx-TU-dNI"/>
-                        <constraint firstItem="6D3-sJ-KHz" firstAttribute="leading" secondItem="FVk-vd-oJw" secondAttribute="leading" constant="8" id="XiH-Ab-Wz0"/>
+                        <constraint firstItem="6D3-sJ-KHz" firstAttribute="leading" secondItem="FVk-vd-oJw" secondAttribute="leading" constant="16" id="XiH-Ab-Wz0"/>
                         <constraint firstAttribute="height" constant="60" id="bok-S0-yEG"/>
                         <constraint firstItem="6D3-sJ-KHz" firstAttribute="top" secondItem="FVk-vd-oJw" secondAttribute="top" id="dEx-Zl-7zf"/>
-                        <constraint firstAttribute="trailing" secondItem="6D3-sJ-KHz" secondAttribute="trailing" constant="8" id="lpZ-Ub-5ls"/>
+                        <constraint firstAttribute="trailing" secondItem="6D3-sJ-KHz" secondAttribute="trailing" constant="16" id="lpZ-Ub-5ls"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iqz-jd-gin">
@@ -174,6 +185,7 @@
     </objects>
     <resources>
         <image name="notification_icon" width="24" height="24"/>
+        <image name="points_icon" width="16" height="16"/>
         <image name="profile_img" width="41" height="41"/>
         <namedColor name="NeutralGray1">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
