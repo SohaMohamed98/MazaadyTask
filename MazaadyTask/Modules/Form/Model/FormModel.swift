@@ -52,3 +52,6 @@ struct Category: Codable {
 struct Statistics: Codable {
     let auctions, users, products: Int?
 }
+
+
+typealias CatModel = [Category]?

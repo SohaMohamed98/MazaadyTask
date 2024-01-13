@@ -39,6 +39,8 @@
 		0431BF382B52F8880029EC53 /* Poppins-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431BF252B52F8880029EC53 /* Poppins-Light.otf */; };
 		0431BF392B52F8880029EC53 /* Poppins-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431BF262B52F8880029EC53 /* Poppins-BlackItalic.otf */; };
 		0431BF3A2B52F8880029EC53 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431BF272B52F8880029EC53 /* Poppins-Regular.otf */; };
+		0431BF3E2B5319D60029EC53 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431BF3D2B5319D60029EC53 /* NetworkClient.swift */; };
+		0431BF412B5323580029EC53 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431BF402B5323580029EC53 /* HomeViewModel.swift */; };
 		043CA8222B5290BA00C71387 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CA8202B5290BA00C71387 /* HomeVC.swift */; };
 		043CA8232B5290BA00C71387 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043CA8212B5290BA00C71387 /* HomeVC.xib */; };
 		043CA8262B5290D600C71387 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CA8252B5290D600C71387 /* HomeVM.swift */; };
@@ -134,6 +136,8 @@
 		0431BF252B52F8880029EC53 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
 		0431BF262B52F8880029EC53 /* Poppins-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.otf"; sourceTree = "<group>"; };
 		0431BF272B52F8880029EC53 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		0431BF3D2B5319D60029EC53 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		0431BF402B5323580029EC53 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		043CA8202B5290BA00C71387 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		043CA8212B5290BA00C71387 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		043CA8252B5290D600C71387 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
@@ -457,6 +461,8 @@
 			isa = PBXGroup;
 			children = (
 				04817B0E2B5180EF006F15EB /* MazaadyTaskTests.swift */,
+				0431BF3D2B5319D60029EC53 /* NetworkClient.swift */,
+				0431BF402B5323580029EC53 /* HomeViewModel.swift */,
 			);
 			path = MazaadyTaskTests;
 			sourceTree = "<group>";
@@ -925,6 +931,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04817B0F2B5180EF006F15EB /* MazaadyTaskTests.swift in Sources */,
+				0431BF412B5323580029EC53 /* HomeViewModel.swift in Sources */,
+				0431BF3E2B5319D60029EC53 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
