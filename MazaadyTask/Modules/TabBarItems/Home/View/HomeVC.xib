@@ -24,6 +24,7 @@
             <connections>
                 <outlet property="uiHeaderCollection" destination="iqz-jd-gin" id="fwA-Ig-5gU"/>
                 <outlet property="uiItemCollection" destination="Q5p-bv-xEM" id="H9U-jr-Jni"/>
+                <outlet property="uiPageControl" destination="1cX-9S-Mxt" id="c3Y-uW-wPo"/>
                 <outlet property="uiTypeCollection" destination="RSC-LX-QfC" id="lqS-D8-Bv6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -161,8 +162,8 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Q5p-bv-xEM">
-                    <rect key="frame" x="16" y="351" width="359" height="419"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Q5p-bv-xEM">
+                    <rect key="frame" x="16" y="351" width="359" height="385"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PQV-uh-5A6">
                         <size key="itemSize" width="128" height="128"/>
@@ -171,10 +172,16 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1cX-9S-Mxt" customClass="CustomPageControl" customModule="MazaadyTask" customModuleProvider="target">
+                    <rect key="frame" x="129.66666666666666" y="744" width="115.66666666666666" height="26"/>
+                    <color key="pageIndicatorTintColor" name="NeutralGray5"/>
+                    <color key="currentPageIndicatorTintColor" name="PrimaryRed"/>
+                </pageControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="1cX-9S-Mxt" firstAttribute="top" secondItem="Q5p-bv-xEM" secondAttribute="bottom" constant="8" id="2HL-G7-IqC"/>
                 <constraint firstItem="vO1-P7-SAS" firstAttribute="leading" secondItem="iqz-jd-gin" secondAttribute="leading" id="5Z9-nz-rSL"/>
                 <constraint firstItem="RSC-LX-QfC" firstAttribute="leading" secondItem="iqz-jd-gin" secondAttribute="leading" id="LIm-UX-xWl"/>
                 <constraint firstItem="FVk-vd-oJw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="S7L-FB-0cq"/>
@@ -182,11 +189,12 @@
                 <constraint firstItem="RSC-LX-QfC" firstAttribute="trailing" secondItem="iqz-jd-gin" secondAttribute="trailing" id="Tnv-qN-6Zn"/>
                 <constraint firstItem="RSC-LX-QfC" firstAttribute="top" secondItem="vO1-P7-SAS" secondAttribute="bottom" constant="16" id="Wni-lL-Hsg"/>
                 <constraint firstItem="Q5p-bv-xEM" firstAttribute="top" secondItem="RSC-LX-QfC" secondAttribute="bottom" constant="24" id="YLw-Dg-HKt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1cX-9S-Mxt" secondAttribute="bottom" constant="8" id="h8b-hE-uMj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iqz-jd-gin" secondAttribute="trailing" id="jl1-zc-4yS"/>
                 <constraint firstItem="iqz-jd-gin" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="oVT-Kx-WVt"/>
                 <constraint firstItem="Q5p-bv-xEM" firstAttribute="leading" secondItem="RSC-LX-QfC" secondAttribute="leading" id="omk-P4-I0d"/>
+                <constraint firstItem="1cX-9S-Mxt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pxo-Yc-zCg"/>
                 <constraint firstItem="iqz-jd-gin" firstAttribute="top" secondItem="FVk-vd-oJw" secondAttribute="bottom" constant="30" id="rgL-HX-fxi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Q5p-bv-xEM" secondAttribute="bottom" constant="8" id="s7q-pe-qjT"/>
                 <constraint firstItem="FVk-vd-oJw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v5K-98-8a6"/>
                 <constraint firstItem="vO1-P7-SAS" firstAttribute="top" secondItem="iqz-jd-gin" secondAttribute="bottom" constant="20" id="xjQ-AX-mTh"/>
                 <constraint firstItem="Q5p-bv-xEM" firstAttribute="trailing" secondItem="RSC-LX-QfC" secondAttribute="trailing" id="yPg-dP-boQ"/>
@@ -200,6 +208,12 @@
         <image name="profile_img" width="41" height="41"/>
         <namedColor name="NeutralGray1">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NeutralGray5">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryRed">
+            <color red="0.92549019607843142" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondaryYellowEgg">
             <color red="0.9882352941176471" green="0.81568627450980391" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

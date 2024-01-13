@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxRelay
 class HomeVM: BaseViewModel{
-    
+    let currentPage = BehaviorRelay<Int>(value: 0)
     private var items: [ItemModel] = ItemModel.items
     
     let headersObservable = Observable<[HeaderModel]>.just(HeaderModel.headers)

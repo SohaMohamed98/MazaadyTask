@@ -55,7 +55,8 @@ extension HeaderModel{
 extension ItemModel{
     static var items: [ItemModel] {
         return [.init(id: 1, freeFlag: "Free e-book", title: "Step design sprint for beginner", time: "5h 21m", author: "Laurel Seilha", position: "Product Designer", bookImage: "BaseBackground", authorImage: "authorOne", lessonNumber: "6 lessons", category: "UI/UX", free: "Free"),
-                .init(id: 2, freeFlag: nil, title: "Basic skill for sketch illustratior", time: "3h 21m", author: "Laurel Seilha", position: "Product Designer", bookImage: "Background2", authorImage: "authorTwo", lessonNumber: "2 lessons", category: "Design", free: nil)
+                .init(id: 2, freeFlag: nil, title: "Basic skill for sketch illustratior", time: "3h 21m", author: "Laurel Seilha", position: "Product Designer", bookImage: "Background2", authorImage: "authorTwo", lessonNumber: "2 lessons", category: "Design", free: nil),
+                .init(id: 3, freeFlag: "Free e-book", title: "Step design For Learn Photoshop", time: "8h 12m", author: "Laurel Seilha", position: "Product Designer", bookImage: "BaseBackground", authorImage: "authorOne", lessonNumber: "5 lessons", category: "3D Animation", free: "Free")
         ]
     }
 }

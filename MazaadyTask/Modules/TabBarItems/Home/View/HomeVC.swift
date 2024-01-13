@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 class HomeVC: BaseWireFrame<HomeVM> {
     
+    @IBOutlet weak var uiPageControl: CustomPageControl!
     @IBOutlet weak var uiTypeCollection: UICollectionView!{
         didSet{
             uiTypeCollection.register(
@@ -33,7 +34,6 @@ class HomeVC: BaseWireFrame<HomeVM> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func bind(viewModel: HomeVM) {
@@ -45,8 +45,9 @@ class HomeVC: BaseWireFrame<HomeVM> {
         typeSelected()
         designType()
         designItem()
+        bindCountPageControl()
+        bindCurrentPageControl()
     }
-    
     
     // MARK: - Configure Header Collection -
     func bindHeaders(){
@@ -119,6 +120,15 @@ class HomeVC: BaseWireFrame<HomeVM> {
                    cellType: HomeItemCell.self)){row, item, cell in
             cell.configureCell(item: item)
         }.disposed(by: self.disposeBag)
+        
+        uiItemCollection.rx.contentOffset
+            .map { contentOffset in
+                let pageWidth = self.uiItemCollection.frame.width
+                let currentPage = Int((contentOffset.x + pageWidth / 2) / pageWidth)
+                return currentPage
+            }
+            .bind(to: self.viewModel.currentPage)
+            .disposed(by: disposeBag)
     }
     
     
@@ -139,3 +149,23 @@ extension HomeVC: UICollectionViewDelegateFlowLayout{
     }
     
 }
+// MARK: - Handel Bottom Page Control -
+extension HomeVC {
+    private func bindCountPageControl(){
+        self.viewModel.itemsSubject.subscribe(onNext:{[weak self] value in
+            guard let self = self else{return}
+            self.uiPageControl.numberOfPages = value.count
+            self.uiPageControl.layoutIfNeeded()
+            self.uiPageControl.setNeedsDisplay()
+        }).disposed(by: self.disposeBag)
+    }
+    private func bindCurrentPageControl(){
+        self.viewModel.currentPage.subscribe(onNext:{[weak self] value in
+            guard let self = self else{return}
+            uiPageControl.currentPage = value
+            self.uiPageControl.layoutIfNeeded()
+            self.uiPageControl.setNeedsDisplay()
+        }).disposed(by: self.disposeBag)
+    }
+}
+
